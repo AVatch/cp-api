@@ -1,6 +1,7 @@
 .DS_Store
 migrations/
 *.sqlite3
+*.pem
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
