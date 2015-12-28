@@ -6,7 +6,7 @@ from rest_framework.authtoken import views as rest_views
 import views
 
 # API endpoints
-urlpatterns = [
+urlpatterns = format_suffix_patterns([
     url(r'^clipboards$',
         views.ClipboardList.as_view(),
         name='clipboard-list'),
@@ -18,4 +18,4 @@ urlpatterns = [
     url(r'^clipboards/(?P<pk>[0-9]+)/snippets$',
         views.ClipboardSnippetList.as_view(),
         name='clipboard-snippets-list'),
-]
+])
