@@ -1,12 +1,11 @@
 from django.conf.urls import url, include
 
-from rest_framework.urlpatterns import format_suffix_patterns
 from rest_framework.authtoken import views as rest_views
 
 import views
 
 # API endpoints
-urlpatterns = format_suffix_patterns([
+urlpatterns = [
     url(r'^clipboards$',
         views.ClipboardList.as_view(),
         name='clipboard-list'),
@@ -18,4 +17,4 @@ urlpatterns = format_suffix_patterns([
     url(r'^clipboards/(?P<pk>[0-9]+)/snippets$',
         views.ClipboardSnippetList.as_view(),
         name='clipboard-snippets-list'),
-])
+]

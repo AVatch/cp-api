@@ -41,13 +41,13 @@ CORE_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
 ]
 
 APPS = [
-    'accounts',
-    'clipboards',
-    'snippets'
+    'accounts.apps.AccountsConfig',
+    'clipboards.apps.ClipboardsConfig',
+    'snippets.apps.SnippetsConfig',
 ]
 
 INSTALLED_APPS = CORE_APPS + THIRD_PARTY_APPS + APPS
